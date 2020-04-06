@@ -39,13 +39,13 @@ public class AppUserController {
 
 	@GetMapping(value= "/getbyid/{appuser-id}")
 	public Optional<AppUser> getById(@PathVariable(value= "appuser-id") Long id) {
-		System.out.println("Getting appuser with appuser-id= {}." + id);
+		System.out.println("Getting appuser with appuser-id= " + id);
 		return appUserService.findAppUserById(id);
 	}
 
 	@PutMapping(value= "/update/{appuser-id}")
 	public String update(@PathVariable(value= "appuser-id") Long id, @RequestBody AppUser e) {
-		System.out.println("Updating appuser with appuser-id= {}." + id);
+		System.out.println("Updating appuser with appuser-id= " + id);
 		e.setId(id);
 		appUserService.updateAppUser(e);
 		return "AppUser record for appuser-id= " + id + " updated.";
@@ -53,7 +53,7 @@ public class AppUserController {
 
 	@DeleteMapping(value= "/delete/{appuser-id}")
 	public String delete(@PathVariable(value= "appuser-id") Long id) {
-		System.out.println("Deleting appuser with appuser-id= {}."+ id);
+		System.out.println("Deleting appuser with appuser-id= "+ id);
 		appUserService.deleteAppUserById(id);
 		return "AppUser record for appuser-id= " + id + " deleted.";
 	}
