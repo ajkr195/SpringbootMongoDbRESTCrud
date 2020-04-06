@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "e998b5eb-8984-4906-ab15-f40ff75c9764",
+		"name": "Springboot-mongodb-crud-operations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create employees",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"id\": 1,\n    \"name\": \"somename2\",\n    \"useremail\": \"useremail2\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Leticia Mariotte\",\n    \"useremail\": \"Developer\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Adriano Waldocke\",\n    \"useremail\": \"Manager\"\n  },\n  {\n    \"id\": 4,\n    \"name\": \"Morena Roughey\",\n    \"useremail\": \"Administrator\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Ingeberg Creer\",\n    \"useremail\": \"Sr. Developer\"\n  }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mongo/appuser/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mongo",
+						"appuser",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mongo/appuser/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mongo",
+						"appuser",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get appuser by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mongo/appuser/getbyid/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mongo",
+						"appuser",
+						"getbyid",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete appuser by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mongo/appuser/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mongo",
+						"appuser",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all employees",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mongo/appuser/deleteall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mongo",
+						"appuser",
+						"deleteall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update appuser by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"somename1\",\n    \"useremail\": \"useremail1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mongo/appuser/update/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mongo",
+						"appuser",
+						"update",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
